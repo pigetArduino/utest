@@ -1,9 +1,9 @@
 ﻿UTest
 -------------------
 ![UTestpython app](https://github.com/pigetArduino/utest/raw/master/doc/utestapp.png)
-* Download link: utestapp.madnerd.org
-* Download arduino code : utest.madnerd.org
-* Download arduino nano drivers : nano.madnerd.org
+* Download link: http://utestapp.madnerd.org
+* Download arduino code : http://utest.madnerd.org
+* Download arduino nano drivers : http://nano.madnerd.org
 
 Utest is a test application that will turn on/off a led on an arduino nano clone   
 
