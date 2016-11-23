@@ -1,14 +1,18 @@
 ﻿UniversalTest
 -------------------
 ![UTestpython app](https://github.com/pigetArduino/utest/raw/master/doc/utestapp.png)
-* Download: http://utestapp.madnerd.org
-* Arduino / Python code: http://utest.madnerd.org
-* Drivers Arduino nano (CH340g) : http://nano.madnerd.org
+Demo : http://youtube/todo
 
 Utest is a **python** application to control arduinos on Windows.   
 This application turn on/off the internal led on an arduino nano (clone)   
 A **python module** handle the arduino    
 The application can be saved as an executable to be used by anyone    
+
+# Usage
+* Install drivers for arduino nano (clone ch340g)  : http://nano.madnerd.org
+* Download arduino code : http://utest.madnerd.org
+* Upload sketch **utest.ino**
+* Download application : http://utestapp.madnerd.org
 
 # Features
 * Easy to understand and modify code 
@@ -43,7 +47,7 @@ pip install pyserial
 python utest.py
 ```
 
-# Compile
+## Compile
 You can compile the applicatio to share it as an .exe file
 You need to install **pyinstaller**
 
@@ -111,9 +115,5 @@ void loop() {
 ```
 
 # Licences
-Icons by jpapun
-Creative Commons Attribution (by)
-Lien : http://findicons.com/icon/158595/device_and_hardware
-
 Software by Rémi Sarrailh (madnerd.org)
 Licence: MIT
