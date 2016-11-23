@@ -6,9 +6,9 @@
 * Drivers Arduino nano (CH340g) : http://nano.madnerd.org
 
 Utest is a **python** application to control arduinos on Windows.   
-This application turn on/off the internal led on an arduino nano (clone)
-A **python module** handle the arduino
-The application can be saved as an executable to be used by anyone
+This application turn on/off the internal led on an arduino nano (clone)   
+A **python module** handle the arduino    
+The application can be saved as an executable to be used by anyone    
 
 # Features
 * Easy to understand and modify code 
