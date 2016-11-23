@@ -1,2 +1,2 @@
-pyinstaller --onefile --noconsole --icon=ul.ico ul.py 
-rem pyinstaller --onefile ul.py 
+pyinstaller --onefile --noconsole utest.py 
+rem pyinstaller --onefile utest.py 
