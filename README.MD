@@ -1,74 +1,77 @@
-﻿UTest
+﻿UniversalTest
 -------------------
 ![UTestpython app](https://github.com/pigetArduino/utest/raw/master/doc/utestapp.png)
-* Download link: http://utestapp.madnerd.org
-* Download arduino code : http://utest.madnerd.org
-* Download arduino nano drivers : http://nano.madnerd.org
+* Download: http://utestapp.madnerd.org
+* Arduino / Python code: http://utest.madnerd.org
+* Drivers Arduino nano (CH340g) : http://nano.madnerd.org
 
-Utest is a test application that will turn on/off a led on an arduino nano clone   
+Utest is a **python** application to control arduinos on Windows.   
+This application turn on/off the internal led on an arduino nano (clone)
+A **python module** handle the arduino
+The application can be saved as an executable to be used by anyone
 
-This is a *python* application make with *tkinter* to use arduino as reliable usb devices.
-This application use a python module that will manage the arduino so you can focus on   
-Features:
-* Autodetect correct port (even if you change serial port by plugging your arduino on another port)
-* Reconnect automatically when a messsage isn't received correctly
-* Complete abstraction of the arduino detection/serial communication.
-Using this python module, you can plugged as much arduino nano you want and control them seperately   
-For now message reception is not managed but it should be easy to add
+# Features
+* Easy to understand and modify code 
+* Serial port autodetection
+* Auto reconnection even if the serial port change
+* You don't need to manage detection and serial communication.
+* Control multiples arduinos
 
 # Issues
-This application won't works on Windows 7 if it wasn't properly updated, since you will need Universal C Runtime.   
-If you run into any issues, please advice me, I want to make the application as simple to install as possible.
-* You will need this update: https://support.microsoft.com/en-gb/kb/2999226
-* Source: http://stackoverflow.com/questions/34218333/pyinstaller-onefile-does-not-start-on-some-windows-7-machines
+The application might not work on Windows 7 due to missing .dll 
+This shouldn't happen if your computer is up to date
+* Why?: http://stackoverflow.com/questions/34218333/pyinstaller-onefile-does-not-start-on-some-windows-7-machines
+* Update needed: https://support.microsoft.com/en-gb/kb/2999226
 
-# Build it yourself!
+# Modify the application
 
-## Download
+## Prerequistes
 * Download python 3 : https://www.python.org/downloads/
-* You need to add python in your PATH during install!
+* During the installation, tick **Add Python 3.5 to PATH**   
+![Python Path](https://github.com/pigetArduino/utest/raw/master/doc/python_install_path.jpg)
 
-## Dependencies
-We need tkinter (bundled with python) and pySerial
 * Open a command prompt (Windows Key + cmd)
 ```
 pip install pyserial
 ```
 
-## Start application
-* Open a command prompt (Windows Key + cmd)
-* Go to the folder of the application 
+## Start the application
+* Open a command prompt (Windows key + cmd)
+* Go to the source code 
 * Type:
 ```
 python utest.py
 ```
 
 # Compile
-You will need pyinstaller to create an executable   
+You can compile the applicatio to share it as an .exe file
+You need to install **pyinstaller**
 
 ```
 pip install pyinstaller
 ```
-You can use compile.bat or 
+Then you can compile it using the script **compile.bat** or 
 ```
 pyinstaller --onefile --noconsole utest.py 
 ```
-If you want to debug the application
+If you wan't to display debug messages
 ```
 pyinstaller --onefile utest.py 
 ```
 
-# How to use the library
-Check the source code (for the arduino/python app) for more information    
-There is only two commands, since the arduino detection is managed in a seperated thread   
-You need to have a loop in the main thread   
+# How to use the library : USB.py
+In order to manage the arduino the easiest way possible, everything is handle by the module usb.py
+Check the source code (in apps/utest and /utest) for more information
 
-Connect to your arduino
+## Windows
+The module only has two commands
+
+Manage arduino serial communication
 ```
-device_name = "CH340" #Device name
-device_type = "UTest" #Device type as defined in the arduino code
-device_return_string = "OK" #Return string
-device_baudrate = 115200 #Baudrate
+device_name = "CH340" #Nom de la puce série de l'arduino
+device_type = "UTest" #Nom de l'arduino (définit dans le programme de celui-ci)
+device_return_string = "OK" #Réponse de l'arduino à une commande correcte
+device_baudrate = 115200 #Baudrate (Vitesse de transmission)
 usb = USB.Device(device_name,device_type,device_return_string,device_baudrate)
 ```
 
@@ -77,19 +80,40 @@ Send a string to the arduino
 usb.write("ON")
 ```
 
-# USB Module
-In the source of this application, there is a module that can be easily reuse to communicate with arduino
-* You need to copy the lib folder into your application   
-Arduino must send OK when the device_type command is sent   
-This allow us to be sure we are communicating with the correct arduino   
+## Arduino
+Define device type
+```
+const String usb_name = "UTest";
+```
 
+Usage
+```
+void loop() {
+  serialManager(); //This function manages serial
 
+  //If string received
+     if (readString.length() > 0) {
+      serialCheck(); //Check arduino type
 
+      //Insert actions list here
+      if (readString == "ON"){
+        digitalWrite(13,1);
+      }
+      if (readString == "OFF"){
+        digitalWrite(13,0);
+      }
+      
+    }
+
+  //Clear serial buffer
+  readString = "";
+}
+```
 
 # Licences
-Icon by jpapun
+Icons by jpapun
 Creative Commons Attribution (by)
-Link : http://findicons.com/icon/158595/device_and_hardware
+Lien : http://findicons.com/icon/158595/device_and_hardware
 
 Software by Rémi Sarrailh (madnerd.org)
 Licence: MIT
