@@ -1,20 +1,20 @@
-﻿UniversalTest
+﻿UTest
 -------------------
-![UTestpython app](https://github.com/pigetArduino/utest/raw/master/doc/utestapp.png)
-* Demo : http://youtube/todo
+![UTestpython app](https://github.com/pigetArduino/utest/raw/master/doc/utestapp.png)   
+Demo : https://www.youtube.com/watch?v=jTq_U3kP7iU
 
-
-Utest est une application en **python** pour contrôler des arduinos sous Windows.   
+Utest est une base pour créer des application en **python** afin de contrôler des arduinos sous Windows.   
 Cette application éteint/allume la led interne de l'arduino.   
 Un **module python** s'occupe de gérer l'arduino.   
-L'application peut être sauvegardés en tant qu'exécutable et ainsi être facilement utilisé par n'importe qui.
+L'application peut être sauvegardés en tant qu'exécutable afin de facilement la partager.
 
 # Utilisation
-* Installer Pilotes de l'arduino nano (clone ch340g)  : http://nano.madnerd.org
+* Installer les pilotes de l'arduino nano (clone ch340g)  : http://nano.madnerd.org
 * Télécharger le code arduino : http://utest.madnerd.org
 * Téléverser le logiciel **utest.ino**
 * Télécharger l'application : http://utestapp.madnerd.org
 
+Comment installer les pilotes : https://www.youtube.com/watch?v=m3CsftsfiQU
 
 # Fonctionnalités
 * Code accessible et simple à modifier 
@@ -29,7 +29,10 @@ Normalement si votre ordinateur est à jour ceci ne devrait pas arriver
 * Explications: http://stackoverflow.com/questions/34218333/pyinstaller-onefile-does-not-start-on-some-windows-7-machines
 * Mis à jour nécessaire: https://support.microsoft.com/en-gb/kb/2999226
 
-# Modifier le programme
+# Créer son propre programme
+Cette application utilise **tkinter** (qui est inclut dans python) afin de gérer l'interface graphique
+Documentation (fr): http://apprendre-python.com/page-tkinter-interface-graphique-python-tutoriel    
+Documentation (en): http://www.tkdocs.com/tutorial/index.html
 
 ## Prérquis
 * Télécharger python 3 : https://www.python.org/downloads/
@@ -42,7 +45,7 @@ pip install pyserial
 ```
 
 ## Lancer l'application
-* Ouvrer une invite de commande (Touche Windows + cmd)
+* Ouvrez une invite de commande (Touche Windows + cmd)
 * Aller dans le dossier du code source 
 * Tapez:
 ```
