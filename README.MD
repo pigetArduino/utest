@@ -54,7 +54,7 @@ python utest.py
 ```
 
 ## Compile
-You can compile the applicatio to share it as an .exe file    
+You can compile the application to share it as an .exe file    
 However, You need to install **pyinstaller**
 
 ```
