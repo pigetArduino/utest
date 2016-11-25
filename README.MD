@@ -1,4 +1,6 @@
-﻿﻿UTest : Make USB Devices with Arduino
+[Version française / French version](https://github.com/pigetArduino/utest/blob/master/readme.fr.md)
+
+UTest : Make USB Devices with Arduino
 -------------------
 ![UTestpython app](https://github.com/pigetArduino/utest/raw/master/doc/utestapp.png)   
 Demo : https://www.youtube.com/watch?v=jTq_U3kP7iU
