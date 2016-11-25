@@ -35,7 +35,7 @@ This shouldn't happen if your computer is up to date
 This application use *tkinter* (which is included in python) to manage the gui    
 Documentation : http://www.tkdocs.com/tutorial/index.html
 
-## Prerequistes
+## Prerequisites
 * Download python 3 : https://www.python.org/downloads/
 * During the installation, tick **Add Python 3.5 to PATH**   
 ![Python Path](https://github.com/pigetArduino/utest/raw/master/doc/python_install_path.jpg)
