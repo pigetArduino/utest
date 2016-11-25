@@ -1,6 +1,7 @@
 //Example of Universal device
 //This code 
-//Led : github.com/pigetArduino/universalLed
+//utest: github.com/pigetArduino/utest
+//uled : github.com/pigetArduino/uled
 
 
 const String usb_name = "UTest";
