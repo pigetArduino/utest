@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-# Example application for Universal Led 
-# Doc : http://github.com/pigetArduino/UniversalLed
+# Example application for Universal Test
+# Doc : http://github.com/pigetArduino/utest
 # Author : Rémi Sarrailh (madnerd.org)
 # Licence : MIT
 
