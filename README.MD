@@ -1,11 +1,11 @@
 ﻿UniversalTest
 -------------------
-![UTestpython app](https://github.com/pigetArduino/utest/raw/master/doc/utestapp.png)
-Demo : http://youtube/todo
+![UTestpython app](https://github.com/pigetArduino/utest/raw/master/doc/utestapp.png)   
+Demo : todo
 
 Utest is a **python** application to control arduinos on Windows.   
 This application turn on/off the internal led on an arduino nano (clone)   
-A **python module** handle the arduino    
+A **python module** manages the arduino    
 The application can be saved as an executable to be used by anyone    
 
 # Usage
