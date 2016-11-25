@@ -1,4 +1,4 @@
-[Version française / French version](https://github.com/pigetArduino/utest/blob/master/readme.fr.md)
+[Version française / French version](https://github.com/pigetArduino/utest/blob/master/README.fr.MD)
 
 UTest : Make USB Devices with Arduino
 -------------------
