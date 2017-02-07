@@ -79,6 +79,7 @@ Le module est constitué d'uniquement deux commandes pour le moment
 
 Se connecter à un arduino
 ```
+from lib import USB
 device_name = "CH340" #Nom de la puce série de l'arduino
 device_type = "UTest" #Nom de l'arduino (définit dans le programme de celui-ci)
 device_return_string = "OK" #Réponse de l'arduino à une commande correcte
