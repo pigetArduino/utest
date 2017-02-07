@@ -78,6 +78,7 @@ The module only has two commands
 
 Manage arduino serial communication
 ```
+from lib import USB
 device_name = "CH340" #Device name in Windows
 device_type = "UTest" #Device type (in the arduino sketch)
 device_return_string = "OK" #Answer when a response is correct
